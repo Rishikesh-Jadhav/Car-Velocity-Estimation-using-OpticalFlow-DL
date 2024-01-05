@@ -24,7 +24,7 @@ This project combines classic optical flow algorithms (Lucas-Kanade and Farnebac
 The project addresses the critical need for accurate vehicle speed estimation in autonomous vehicles. Optical flow algorithms, both classic and deep learning-based, are applied to video data from onboard cameras. The focus is on practical implementation, including a hardware setup on a robot rover, making the project applicable to real-world scenarios.
 
 ---
-outputs%20and%20results/pipeline.png
+
 ## 2. Algorithms
 
 ### 2.1 Algorithm Overview - Lucas-Kanade
