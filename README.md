@@ -1,5 +1,4 @@
-# VelocityEstimation-OpticalFlow
-# Optical Flow Analysis and Hardware Implementation on Robot Rover
+# Optical Flow Analysis and Hardware Implementation on Robot Rover for Car velocity estimation
 
 ## Project Overview
 
