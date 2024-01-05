@@ -1,4 +1,4 @@
-# Optical Flow Analysis and Hardware Implementation on Robot Rover for Car velocity estimation
+# Optical Flow Analysis and Hardware Implementation on Robot Rover for Car Velocity Estimation
 
 ## Project Overview
 
@@ -8,14 +8,15 @@ This project combines classic optical flow algorithms (Lucas-Kanade and Farnebac
 1. [Introduction](#1-introduction)
 2. [Algorithms](#2-algorithms)
     - [Lucas-Kanade](#21-algorithm-overview---lucas-kanade)
-    - [Farneback](#22-algorithm-overview---farneback-gunnar)
+    - [Farneback Gunnar](#22-algorithm-overview---farneback-gunnar)
     - [RAFT](#23-raft)
     - [YOLO](#24-yolo)
 3. [Results](#3-results)
 4. [Hardware](#4-hardware)
-5. [Live Demo](#5-live-demo)
-6. [Future Work](#6-future-work)
-7. [Challenges](#7-challenges)
+6. [Challenges](#6-challenges)
+7. [Future Work](#7-future-work)
+8. [Conclusion](#8-conclusion)
+9. [References](#9-references)
 
 ---
 
@@ -48,21 +49,30 @@ Recurrent All-Pairs Field Transforms (RAFT), a deep network architecture, produc
 ### 2.4 YOLO
 
 You Only Look Once (YOLO), a real-time object detection system, is integrated into the pipeline for identifying cars and providing bounding boxes for Region of Interest (ROI) determination.
-![yolo detection](outputs%20and%20results/yolo%20detection.png)
+
+![YOLO Detection](outputs%20and%20results/yolo%20detection.png)
 
 ---
 
-## 3. Our Pipeline for car velocity estimation 
+## 3. Results
+
+### 3.1 Our Pipeline for Car Velocity Estimation 
 
 ![Pipeline](outputs%20and%20results/pipeline.png)
 
-## 4. Results
+### 3.2 Test Results for Lukas and Farne
 
 The project showcases results from Lucas-Kanade, Farneback, and RAFT, including optical flow, feature points, and motion vectors. Live demo results and YOLO integration for ROI determination are presented.
 
+![Test Results](outputs%20and%20results/lukas%20plus%20farne.png)
+
+### 3.3 Final Results with Combined YOLO-RAFT Pipeline
+
+![Results](outputs%20and%20results/test%20results.png)
+
 ---
 
-## 5. Hardware
+## 4. Hardware
 
 A mobile robot, powered by Raspberry Pi 4, Pi Camera, and a custom-built platform, is designed for video recording and analysis. The section covers hardware specifications, video streaming details, and challenges faced during implementation.
 
@@ -70,24 +80,34 @@ A mobile robot, powered by Raspberry Pi 4, Pi Camera, and a custom-built platfor
 
 ---
 
-## 6. Live Demo
+## 6. Challenges
 
-Live demo results, including video links and real-time optical flow analysis, are provided, offering recruiters a hands-on perspective of the project.
+This project encountered several challenges that required innovative problem-solving and adaptability:
+
+- Depth Data: Obtaining accurate depth information was hindered by the camera's limitations, impacting velocity calculations and necessitating alternative methods.
+- Real-time Processing: Achieving real-time processing on the Raspberry Pi 4 posed computational challenges, requiring optimizations to balance performance with limited hardware capabilities.
+- Camera Calibration: Challenges in obtaining precise calibration values impacted velocity accuracy, prompting iterative refinement of calibration techniques.
+- YOLO and RAFT Integration: Seamless integration of YOLO for object detection and RAFT for optical flow involved addressing compatibility issues and aligning diverse method outputs.
+- Network Latency: Overcoming network latency during live video streaming demanded optimizations for maintaining synchronization with real-time processing.
+- Lighting Conditions: Varied lighting conditions affected video quality, necessitating system adjustments for robustness under different scenarios.
+- Model Training: Challenges in RAFT model training on the KITTI dataset included parameter tuning and ensuring generalization across diverse scenarios.
+- Multi-car Velocity Calculation: Extending velocity calculations to multiple cars required modifications for tracking and distinguishing between vehicles.
+- Hardware Limitations: The Raspberry Pi 4's computational limitations posed ongoing challenges, necessitating efficient algorithm adaptation while maintaining performance standards.
+
+## 7. Future Work
+
+We suggest potential avenues for future work, including implementing a robot tracking system, improving velocity calculations, modifying RAFT, and making it lightweight for real-time output, as in our case after deployment the model was too heavy for the Raspi cam and computations slowed the process, and extending the method for tracking multiple cars.
 
 ---
 
-## 6. Future Work
+## 8. Conclusion
 
-The project suggests potential avenues for future work, including implementing a robot tracking system, improving velocity calculations, modifying RAFT for real-time output, and extending the method for tracking multiple cars.
+This project provides, emphasizing practical implementation on a robot rover. The combination of classic and deep learning-based optical flow algorithms, coupled with a detailed hardware setup, positions this project as a valuable asset for researchers and practitioners in the field.
 
----
+## 9. References
 
-## 7. Challenges
-
-This section outlines challenges faced during the project, demonstrating problem-solving skills and the ability to overcome obstacles.
-
----
-
-**Conclusion:**
-
-This comprehensive README provides a structured overview of the project, emphasizing practical implementation on a robot rover. The combination of classic and deep learning-based optical flow algorithms, coupled with a detailed hardware setup, positions this project as a valuable asset for researchers and practitioners in the field.
+1. A. Geiger, P. Lenz, R. Urtasun, "Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite," Conference on Computer Vision and Pattern Recognition (CVPR), 2012, [Link](https://link.springer.com/article/10.1007/s00138-012-0435-y).
+2. N. Sharmin, R. Brad, "Optimal Filter Estimation for Lucas-Kanade Optical Flow," Sensors, vol. 12, no. 9, pp. 12694–12709, Sep. 2012, [DOI](https://doi.org/10.3390/s120912694).
+3. Z. Teed, J. Deng, "RAFT: Recurrent all-pairs field transforms for optical flow," [GitHub](https://github.com/princeton-vl/RAFT).
+4. B. Tan, "Guide to Car Detection using YOLO," Towards Data Science.
+5. Rajan Sharma, "YOLO (You Only Look Once). What is YOLO," Medium.
