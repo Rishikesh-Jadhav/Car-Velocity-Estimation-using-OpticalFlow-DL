@@ -109,5 +109,3 @@ This project provides, emphasizing practical implementation on a robot rover. Th
 1. A. Geiger, P. Lenz, R. Urtasun, "Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite," Conference on Computer Vision and Pattern Recognition (CVPR), 2012, [Link](https://link.springer.com/article/10.1007/s00138-012-0435-y).
 2. N. Sharmin, R. Brad, "Optimal Filter Estimation for Lucas-Kanade Optical Flow," Sensors, vol. 12, no. 9, pp. 12694–12709, Sep. 2012, [DOI](https://doi.org/10.3390/s120912694).
 3. Z. Teed, J. Deng, "RAFT: Recurrent all-pairs field transforms for optical flow," [GitHub](https://github.com/princeton-vl/RAFT).
-4. B. Tan, "Guide to Car Detection using YOLO," Towards Data Science.
-5. Rajan Sharma, "YOLO (You Only Look Once). What is YOLO," Medium.
