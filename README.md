@@ -48,6 +48,7 @@ Recurrent All-Pairs Field Transforms (RAFT), a deep network architecture, produc
 ### 2.4 YOLO
 
 You Only Look Once (YOLO), a real-time object detection system, is integrated into the pipeline for identifying cars and providing bounding boxes for Region of Interest (ROI) determination.
+![yolo detection](outputs%20and%20results/yolo%20detection.png)
 
 ---
 
