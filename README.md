@@ -25,14 +25,14 @@ This project combines classic optical flow algorithms (Lucas-Kanade and Farnebac
 The project addresses the critical need for accurate vehicle speed estimation in autonomous vehicles. Optical flow algorithms, both classic and deep learning-based, are applied to video data from onboard cameras. The focus is on practical implementation, including a hardware setup on a robot rover, making the project applicable to real-world scenarios.
 
 ---
-
+outputs%20and%20results/pipeline.png
 ## 2. Algorithms
 
 ### 2.1 Algorithm Overview - Lucas-Kanade
 
 Lucas-Kanade, a sparse optical flow algorithm, tracks feature points between frames. The paper details steps for car velocity estimation, including feature extraction, optical flow calculation, and unit conversion.
 
-![Lucas-Kanade](outputs and results/lucas kanade algo.png)
+![Lucas-Kanade](outputs%20and%20results/lucas%20kanade%20algo.png)
 
 ### 2.2 Algorithm Overview - Farneback Gunnar
 
@@ -44,7 +44,7 @@ Farneback Gunnar, a dense optical flow algorithm, estimates flow for every pixel
 
 Recurrent All-Pairs Field Transforms (RAFT), a deep network architecture, produces multi-scale 4D correlation volumes for pixel pairs, extracting per-pixel characteristics. The method is divided into three stages: feature extraction, visual similarity computation, and iterative updates.
 
-![RAFT](placeholder_raft_image.png)
+![RAFT](outputs%20and%20results/raft.png)
 
 ### 2.4 YOLO
 
@@ -52,21 +52,25 @@ You Only Look Once (YOLO), a real-time object detection system, is integrated in
 
 ---
 
-## 3. Results
+## 3. Our Pipeline for car velocity estimation 
+
+![Pipeline](outputs%20and%20results/pipeline.png)
+
+## 4. Results
 
 The project showcases results from Lucas-Kanade, Farneback, and RAFT, including optical flow, feature points, and motion vectors. Live demo results and YOLO integration for ROI determination are presented.
 
 ---
 
-## 4. Hardware
+## 5. Hardware
 
 A mobile robot, powered by Raspberry Pi 4, Pi Camera, and a custom-built platform, is designed for video recording and analysis. The section covers hardware specifications, video streaming details, and challenges faced during implementation.
 
-![Robot Rover](outputs and results/robot with raspi cam.png)
+![Robot Rover](outputs%20and%20results/robot%20with%20raspi%20cam.png)
 
 ---
 
-## 5. Live Demo
+## 6. Live Demo
 
 Live demo results, including video links and real-time optical flow analysis, are provided, offering recruiters a hands-on perspective of the project.
 
